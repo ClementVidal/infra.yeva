@@ -6,9 +6,8 @@
         "sourceMap": true,
         "emitDecoratorMetadata": true,
         "experimentalDecorators": true,
-        "removeComments": false,
-        "noImplicitAny": false,
-        "outDir": "./build/tsc"
+		"declaration": true,
+        "outDir": "./build/dist"
     },
     "exclude": [
         "typings/index.d.ts",
