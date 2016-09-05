@@ -12,15 +12,16 @@ module.exports = webpackMerge(commonConfig, {
 
     output: {
         path: helpers.root('build/dev'),
-        publicPath: 'http://localhost:8080' + config.publicPath,
         filename: '[name].js',
         libraryTarget: 'umd',
+        externals: [ '@angular/common', '@angular/core'],
         umdNamedDefine: true
     },
 
     plugins: [
         new webpack.DefinePlugin({
             'build.environment': JSON.stringify('dev')
-        })
+        }),
+        new webpack.IgnorePlugin(/@angular/)
     ]
 });

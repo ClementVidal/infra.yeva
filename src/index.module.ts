@@ -1,5 +1,5 @@
 import { NgModule }      from '@angular/core';
-import { CommonModule } from '@angular/platform-browser';
+import { CommonModule } from '@angular/common';
 
 import { YevaComponent }  from './yeva.component';
 
@@ -7,7 +7,7 @@ import { YevaComponent }  from './yeva.component';
   imports: [CommonModule],
   declarations: [YevaComponent],
   providers: [],
-  export: [YevaComponent]
+  exports: [YevaComponent]
 })
 export class YevaModule {
 

@@ -1,6 +1,4 @@
 var webpack = require('webpack');
-var HtmlWebpackPlugin = require('html-webpack-plugin');
-var ExtractTextPlugin = require('extract-text-webpack-plugin');
 var CleanWebpackPlugin = require('clean-webpack-plugin');
 var autoprefixer = require('autoprefixer');
 
@@ -9,9 +7,7 @@ var config = require('./config');
 
 module.exports = {
     entry: {
-        'polyfills': './src/polyfills.ts',
-        'vendor': './src/vendor.ts',
-        'app': './src/main.ts'
+        'lib': './src/index.module.ts'
     },
 
     resolve: {
@@ -70,26 +66,10 @@ module.exports = {
         minimize: false // workaround for ng2
     },
     plugins: [
-        new webpack.optimize.CommonsChunkPlugin({
-            name: ['app', 'vendor', 'polyfills']
-        }),
-
-        new HtmlWebpackPlugin({
-            title: config.title,
-            description: config.description,
-            publicPath: config.publicPath,
-            template: './src/index.ejs',
-            chunksSortMode: 'dependency'
-        }),
         new CleanWebpackPlugin(['public/bundle'], {
             root: helpers.root('.'),
             verbose: true,
             dry: false
-        }),
-        new webpack.ProvidePlugin({
-            $: "jquery",
-            jQuery: "jquery",
-            "window.jQuery": "jquery"
         })
     ]
 };
