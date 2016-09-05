@@ -1,4 +1,4 @@
-# Themba
+# Yeva
 
 Lightweight seed for Angular2 libraries projects.
 
