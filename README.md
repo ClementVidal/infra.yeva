@@ -1,6 +1,6 @@
 # Themba
 
-Lightweight seed for Angular2 projects.
+Lightweight seed for Angular2 libraries projects.
 
 ## Description
 
@@ -9,7 +9,6 @@ Integrate the following tools and libs:
 - Angular2 rc6
 - Webpack 1 
     - Webpack dashboard
-- Foundation 6
 
 ## Usage
 
