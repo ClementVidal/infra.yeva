@@ -7,8 +7,8 @@
     "install": "npm run build",
     "clean": "npm run rimraf -- ./build/dist",
     "build": "tsc",
-    "typings": "typings install",
-    "prepublish": "npm run typings && npm run build"
+    "prebuild": "npm run typings",
+    "typings": "typings install"
   },
   "keywords": [],
   "author": "__AUTHOR__",
